@@ -28,12 +28,15 @@
         <div class="pricing-component">
           {{ pageViews }} Pageviews
           <h2>$ {{ price }} / {{ priceType }}</h2> 
-
-          Monthly Billing
-          Yearly Billing 25% discount
           <div class="custom-slider">
-            <input type="range" min="1" max="100" v-model="sliderVal" @change="sliderChange()" aria-label="price slider" />
+            <input id="priceSlider" type="range" min="1" max="100" v-model="sliderVal" @change="sliderChange()" aria-label="price slider" />
           </div>
+          Monthly Billing
+          <label class="switch">
+            <input type="checkbox" @change="checkChange()">
+            <span class="slider round"></span>
+          </label>
+          Yearly Billing 25% discount
         </div>
         <div class ="details">
           <div class="details-left">
